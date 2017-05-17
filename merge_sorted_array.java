@@ -14,7 +14,7 @@ public class merge_sorted_array {
     	}
     	if (j >= 0) {
     		for (; j>=0; --j) {
-    			nums1[k--] = nums1[j];
+    			nums1[k--] = nums2[j];
     		}
     	}
     }
