@@ -11,16 +11,18 @@ public class Compare_Version_Numbers {
         for (int i = 0; i < length; i++) {
             String sa = i < a.length ? a[i] : "0";
             String sb = i < b.length ? b[i] : "0";
-            int compare = sa.compareTo(sb);
-            if (compare != 0) {
-                return compare;
-            }
+            int na = Integer.parseInt(sa);
+            int nb = Integer.parseInt(sb);
+
+            if (na > nb) return 1;
+            else if (na < nb) return -1;
         }
         return 0;
     }
 
 	public static void main(String[] args) {
         Compare_Version_Numbers c = new Compare_Version_Numbers();
-        System.out.println(c.compareVersion("0.1", "1.1"));
+        // System.out.println(c.compareVersion("0.1", "1.1"));
+        System.out.println(c.compareVersion("01", "1"));
 	}
 }
